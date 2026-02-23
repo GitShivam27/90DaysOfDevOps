@@ -18,21 +18,20 @@ Example:
  .Apps2 needs python 3.11
   They Won't conflict
   # 3. Lightweight (Important Difference from VM)
-  ** Containers share host OS kernel.
-  ** Unlike virtual machine:
-  ** . No Full OS inside 
-  ** . Fatster Startup 
-  ** . Less memory usage
+  Containers share host OS kernel.
+   Unlike virtual machine:
+. No Full OS inside 
+. Fatster Startup 
+. Less memory usage
   # 4. Faster Deployment 
-  ** Start container in seconds where VMs takes minutes.
+ Start container in seconds where VMs takes minutes.
   # 5. Scalability
-  ** We can multile conatainer at time. Used in microservices.
+  We can multile conatainer at time. Used in microservices.
   # 6. Microservices Architecture
-  Modern apps are built as:
-  1.payment-services
-  2.Auth services 
-  3.Order services
-  Each runs in it's own container.
+    Modern apps are built as:
+    1. payment-services
+    2. Auth services 
+    3. Order services
+Each runs in it's own container.
 
-Each runs in its own container.
   
