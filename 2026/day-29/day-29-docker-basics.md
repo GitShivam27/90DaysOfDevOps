@@ -34,4 +34,40 @@ Example:
     3. Order services
 Each runs in it's own container.
 
+# Containers vs Virtual Machines — what's the real difference?
+🔹 Virtual Machine (VM)
+
+```
+Hardware
+   ↓
+  Hypervisor (VMware / VirtualBox / KVM)
+   ↓
+  Guest OS
+   ↓
+ Application + Dependencies
+```
+
+Each VM has it's own:
+1. Its full own OS
+2. Its own kernel
+3. Its own system libraries
+
+ 🔹 Conatainer
+
+```
+Hardware
+   ↓
+Host OS
+   ↓
+Docker Engine
+   ↓
+Containers (App + Dependencies)
+```
+Conatainers:
+1. Shared host OS Kernal
+2. Only package app+dependencies
+3. No separate OS 
+
+   
+
   
