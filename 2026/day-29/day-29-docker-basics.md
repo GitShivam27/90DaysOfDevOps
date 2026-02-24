@@ -66,7 +66,71 @@ Containers (App + Dependencies)
 Conatainers:
 1. Shared host OS Kernal
 2. Only package app+dependencies
-3. No separate OS 
+3. No separate OS
+
+# Docker Architechture
+```
++------------------+
+|   Docker Client  |
+|  (docker CLI)    |
++---------+--------+
+          |
+          | REST API
+          v
++--------------------------+
+|     Docker Daemon        |
+|      (dockerd)           |
+|--------------------------|
+|  Images                  |
+|  Containers              |
+|  Networks                |
+|  Volumes                 |
++-----------+--------------+
+            |
+            |
+            v
++------------------+
+| Docker Registry  |
+| (DockerHub/ECR)  |
++------------------+
+```
+
+**Client**
+Docker Client takes the command and send them to daemon using REST API.
+ Example: 
+ ```
+docker build
+docker run
+docker pull
+```
+Client & daemon can run on same machine or different machines.
+
+**Docker Daemon**
+
+Docker daemon is the brain of docker engine. 
+It:
+* Manage Networks
+* Build Images
+* Run Conatainers
+* Manage Volumes
+
+**Docker Registry**
+A Docker registry is a service designed to store, manage, and distribute Docker images. It acts as a central library where images can be uploaded (pushed) and downloaded (pulled)
+```
+docker pull <image_name: used to pull images from docker registry
+docker push <image_name>: used to push the image on registry
+```
+
+**Docker Images**
+Docker images are the package of the software available to use. It contains full OS, libraries and software that need to run the application:
+We can say that image= Software package
+```
+docker images: list the images
+docker build: used to build the image from dockerfile
+```
+**Docker Cotainers**
+A Docker container is a lightweight, standalone, and executable software package that bundles an application and all its dependencies, ensuring it runs consistently and reliably across different computing environments. It is a running instance of a Docker image. 
+Docker conatiner=Blueprint of Docker Images
 
    
 
