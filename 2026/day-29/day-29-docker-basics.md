@@ -138,6 +138,7 @@ Docker conatiner=Blueprint of Docker Images
 * Install and Verify the Docker 
 
 <img width="747" height="103" alt="docker_version" src="https://github.com/user-attachments/assets/2c94f3f6-d86d-41f4-93dd-92bdc30d0c16" />
+
 * Run the hello-world container
   
 <img width="1003" height="722" alt="docker _hello" src="https://github.com/user-attachments/assets/77b9bbc2-3111-45ef-b9cc-7ce3adecae6f" />
