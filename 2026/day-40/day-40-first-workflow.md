@@ -39,4 +39,29 @@ jobs:
       run: date "+%y-%m-%d %H:%M:%S"
 ```
 <img width="1015" height="640" alt="current_date_time" src="https://github.com/user-attachments/assets/8695e103-fb1b-4db5-890d-7bc786b52d2d" />
-nd time
+
+### List all files in directory
+    ls -l: List all the file in the repo
+
+``` name: hello worksflow
+on:
+    push:
+        branches: [main]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout-code
+      uses: actions/checkout@v4
+    - name: print greeting
+      run: echo "Hello from GitHub Actions!"
+    - name: Print current date and time
+      run: date "+%y-%m-%d %H:%M:%S"
+    - name: Print branch
+      run: echo "Branch name is ${{github.ref_name}}"
+    - name: List the file in repo
+      run: ls -l
+```
+<img width="975" height="607" alt="list_file" src="https://github.com/user-attachments/assets/b5a0fc64-7c56-458e-aefb-0b430292842a" />
+
+
