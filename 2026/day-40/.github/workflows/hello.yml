@@ -1,13 +1,14 @@
-name: Hello
-on:
-    push:
-        branches: [main]
+name: Hello Workflow
+
+on: push
+
 jobs:
-    greet:
-      runs-on: ubuntu-latest
+  greet:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: checkout-code
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: print greetings
-        run:  echo "Hello from GitHub Actions!"
-      
+
+      - name: Print greeting
+        run: echo "Hello from GitHub Actions!"
